@@ -14,7 +14,7 @@ optim = torch.optim.SGD(params, lr=1e-3, momentum=0.9, weight_decay=1e-1)
 lr_scheduler = torch.optim.lr_scheduler.CyclicLR(optim, base_lr=list(lr_arr), max_lr=list(lr_arr*100))
 ```
 
-We can show the learning rates using `optimizer.state_dict()`
+We can show the learning rates using `optim.state_dict()`
 
 | Parameter        | Lr*         
 | ------------- |:-------------:|
