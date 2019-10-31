@@ -84,7 +84,7 @@ def unfreeze_layers(model:nn.Sequential, unfreeze:bool=True)->None:
     for layer in model.parameters():
         layer.requires_grad = unfreeze
 
-def build_param_dicts(layers:nn.Sequential, lr:slice=[0], return_len:bool=False)->Union[int,list]:
+def build_param_dicts(layers:nn.Sequential, lr:list=[0], return_len:bool=False)->Union[int,list]:
     '''
     Either return the number of layers with requires_grad is True
     or return a list of dictionnaries containing each layers on its associated LR"
