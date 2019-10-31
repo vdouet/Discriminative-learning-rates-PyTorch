@@ -113,7 +113,7 @@ def discriminative_lr_params(net:nn.Module, lr:slice, unfreeze:bool=True)->Union
     corresponding learning rate and all other ones will have lr/10
     - If two learning rates are passed such as slice(min_lr, max_lr) the last
     layer will have max_lr as a learning rate and the first one will have min_lr.
-    All middle layers' learning rates are logarithmically interpolated
+    All middle layers will have learning rates logarithmically interpolated
     ranging from min_lr to max_lr
     '''
 
