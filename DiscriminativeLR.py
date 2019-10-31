@@ -10,9 +10,10 @@ from typing import Union
 Developped by the Fastai team for the Fastai library
 From the fastai library
 https://www.fast.ai and https://github.com/fastai/fastai
-Unmodified functions
 '''
 ###############################################################################
+#Unmodified functions:
+
 class PrePostInitMeta(type):
     "A metaclass that calls optional `__pre_init__` and `__post_init__` methods"
     def __new__(cls, name, bases, dct):
