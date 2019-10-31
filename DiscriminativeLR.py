@@ -105,7 +105,7 @@ def build_param_dicts(layers:nn.Sequential, lr:slice=[0], return_len:bool=False)
 
     return len(params) if return_len else params
 
-def Discriminative_lr_params(net:nn.Module, lr:slice, unfreeze:bool=True)->Union[list,np.ndarray,nn.Sequential]:
+def discriminative_lr_params(net:nn.Module, lr:slice, unfreeze:bool=True)->Union[list,np.ndarray,nn.Sequential]:
     '''
     Flatten our model and generate a list of dictionnaries to be passed to the
     optimizer.
