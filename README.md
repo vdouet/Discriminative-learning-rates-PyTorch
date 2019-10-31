@@ -32,4 +32,4 @@ We can show the learning rates using `optimizer.state_dict()`
 
 #### Difference from the fastai version
 
-The big difference is that we give one independant learning rate for each layer here. In the fastai implementation layers are regrouped in blocks .
+The big difference is that we give one independant learning rate for each layer here. In the fastai implementation layers are regrouped in blocks.
