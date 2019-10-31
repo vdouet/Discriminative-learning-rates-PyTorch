@@ -6,7 +6,7 @@ This is an adaptation of the functions from the fastai library to be used with s
 #### Example of use
 
 ```python
-#Using discriminative learning rates resnet50 with SGD and CyclicLR
+#Using discriminative learning rates using resnet50 with SGD and CyclicLR
 
 model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=True)
 params, lr_arr, _ = Discriminative_lr_params(model, slice(1e-5, 1e-3))
