@@ -9,7 +9,7 @@ This is an adaptation of the functions from the fastai library to be used with s
 #Using discriminative learning rates using resnet50 with SGD and CyclicLR
 
 model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=True)
-params, lr_arr, _ = Discriminative_lr_params(model, slice(1e-5, 1e-3))
+params, lr_arr, _ = discriminative_lr_params(model, slice(1e-5, 1e-3))
 optim = torch.optim.SGD(params, lr=1e-3, momentum=0.9, weight_decay=1e-1)
 lr_scheduler = torch.optim.lr_scheduler.CyclicLR(optim, base_lr=list(lr_arr), max_lr=list(lr_arr*100))
 ```
