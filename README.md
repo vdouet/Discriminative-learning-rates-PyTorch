@@ -1,4 +1,4 @@
-# Discriminative-learning-rates-PyToch
+# Discriminative learning rates PyTorch
 Adaptation of discriminative learning rates from the Fastai library for standard PyTorch.
 
 This is an adaptation of the functions from the fastai library to be used with standard PyTorch. Please see the [fastai github](https://github.com/fastai/fastai/blob/master/fastai/train.py#L15) for original implementation.
