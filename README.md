@@ -14,6 +14,9 @@ optim = torch.optim.SGD(params, lr=1e-3, momentum=0.9, weight_decay=1e-1)
 lr_scheduler = torch.optim.lr_scheduler.CyclicLR(optim, base_lr=list(lr_arr), max_lr=list(lr_arr*100))
 ```
 
+* Using `slice(min_lr, max_lr)` the last layer will have max_lr as a learning rate and the first one will have min_lr. All middle layers will have learning rates logarithmically interpolated ranging from min_lr to max_lr.
+* Using `sclice(lr)` the last layer will have the corresponding learning rate and all other ones will have lr/10.
+
 We can show the learning rates using `optim.state_dict()`
 
 | Parameter        | Lr*         
