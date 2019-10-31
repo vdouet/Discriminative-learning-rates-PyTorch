@@ -101,7 +101,7 @@ def build_param_dicts(layers:nn.Sequential, lr:slice=[0], return_len:bool=False)
         if (hasattr(layer, "bias") and hasattr(layer.bias, "requires_grad") and layer.bias.requires_grad):
             param.append(layer.bias)
         if param: params.append({'params': param, 'lr': f'{lr[idx]}'}); idx += 1
-        if not return_len: idx = 0 #We don't want to increment idx here.
+        if return_len: idx = 0 #We don't want to increment idx here.
 
     return len(params) if return_len else params
 
@@ -113,7 +113,7 @@ def Discriminative_lr_params(net:nn.Module, lr:slice, unfreeze:bool=True)->Union
     corresponding learning rate and all other ones will have lr/10
     - If two learning rates are passed such as slice(min_lr, max_lr) the last
     layer will have max_lr as a learning rate and the first one will have min_lr.
-    All middle layers' learning rates are logarithmically interpolated 
+    All middle layers' learning rates are logarithmically interpolated
     ranging from min_lr to max_lr
     '''
 
@@ -125,8 +125,8 @@ def Discriminative_lr_params(net:nn.Module, lr:slice, unfreeze:bool=True)->Union
 
     #Create the list of learning rates
     list_lr = lr_range(net, lr, model_len)
-    
+
     #Create our optimizer parameters list of dictionnaries
     params_layers = build_param_dicts(layers, list_lr)
-    
+
     return params_layers, np.array(list_lr), layers
