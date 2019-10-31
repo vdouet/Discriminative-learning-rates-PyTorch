@@ -13,7 +13,7 @@ https://www.fast.ai and https://github.com/fastai/fastai
 '''
 
 ###############################################################################
-#Unmodified functions:
+#Unmodified classes and functions:
 
 class PrePostInitMeta(type):
     "A metaclass that calls optional `__pre_init__` and `__post_init__` methods"
