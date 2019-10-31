@@ -1,5 +1,5 @@
 # Discriminative-learning-rates-PyToch
-Adaptation of discriminative learning rates from the Fastai library for standard PyTorch
+Adaptation of discriminative learning rates from the Fastai library for standard PyTorch.
 
 This is an adaptation of the functions from the fastai library to be used with standard PyTorch. Please see the [fastai github](https://github.com/fastai/fastai/blob/master/fastai/train.py#L15) for original implementation.
 
@@ -28,7 +28,7 @@ We can show the learning rates using `optimizer.state_dict()`
 | Group 72 | 0.00094
 | Group 73 | 0.00099
   
-\* Learning rates are rounded here
+\* Learning rates are rounded here.
 
 #### Difference from the fastai version
 
